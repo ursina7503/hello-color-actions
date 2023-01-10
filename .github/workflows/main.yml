@@ -19,8 +19,11 @@ jobs:
         env:
           CI: true
   test:
-   runs-on: ubuntu-latest
-   steps:
+    # needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
     - run: |
           echo ${{ secrets.NEW_SECRET }}
 
