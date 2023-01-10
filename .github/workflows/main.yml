@@ -22,7 +22,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
     - run: |
-          echo $NEW_SECRET
+          echo ${{ secrets.NEW_SECRET }}
 
   # deploy:
   #   needs: build
